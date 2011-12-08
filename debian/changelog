@@ -1,13 +1,5 @@
-deepin-desktop (1.1.1) maverick; urgency=low
+deepin-meta (1.0) oneiric; urgency=low
 
-  * Added flashget, ppstream, localepurge, ttf-wqy-microhei
-  * Added google-chrome-beta, opera, skype
+  * Initial pack.
 
- -- Leng Ganghua <hiweed@gmail.com>  Mon, 22 Nov 2010 18:34:00 +0800
-
-deepin-desktop (1.0) maverick; urgency=low
-
-  * Initial release
-
- -- Leng Ganghua <hiweed@gmail.com>  Mon, 22 Nov 2010 08:56:00 +0800
-
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 08 Dec 2011 17:50:11 +0800
