@@ -1,0 +1,36 @@
+Source: deepin-desktop
+Section: admin
+Priority: optional
+Maintainer: Leng Ganghua <hiweed@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: deepin-desktop
+Architecture: all
+Depends: deepin-info, deepin-common, deepin-artwork-common, deepin-artwork-gnome, deepinsystem,
+  deepin-cursor-theme, deepin-default-settings, deepin-icons, deepin-info-main, deepin-themes
+Recommends: gnome-globalmenu, gnome-window-applets, grub2-theme-deepin, ibus-table, ibus-table-wubi, 
+  language-pack-zh-hans, language-pack-gnome-zh-hans, localepurge, 
+  ttf-wqy-microhei, openoffice.org-l10n-zh-cn,
+  cairo-dock-core, cairo-dock-plug-ins, gtk2-engines-murrine, openfetion, gwrite, deadbeef, ubuntu-tweak,
+  ntfs-config, remmina, flashget, ppstream, shutter, gthumb, leafpad, expect,
+  wine1.2, winetricks, opera, google-chrome-beta, skype,
+  add-apt-key, aptoncd, compiz-check, compizconfig-settings-manager,
+  cups-pdf, gdebi, gimp, gufw, hardinfo, inxi, 
+  mintbackup, mintdesktop, mintinstall, mintmenu, mintnanny, mintupdate,
+  mintupload, mintsystem, mintwifi, nautilus-actions,
+  nautilus-gksu, nautilus-open-terminal, nautilus-wallpaper, ndisgtk,
+  ndiswrapper-common, ndiswrapper-utils-1.9, p7zip, padevchooser, paman,
+  paprefs, pavucontrol, pavumeter, pppoe, pulseaudio-module-zeroconf,
+  python-compizconfig, simple-ccsm, software-properties-gtk,
+  startupmanager, tomboy, pidgin, pidgin-facebookchat, thunderbird,
+  ttf-liberation, usb-creator-gtk, xchat, xchat-common,
+  xdg-user-dirs, xdg-user-dirs-gtk,
+  ubuntu-system-adjustments, vlc, mozilla-plugin-vlc,
+  gstreamer0.10-esd, gstreamer0.10-ffmpeg, gstreamer0.10-pitfdll,
+  gstreamer0.10-plugins-bad, gstreamer0.10-plugins-bad-multiverse,
+  gstreamer0.10-plugins-ugly, gstreamer0.10-plugins-ugly-multiverse,
+  libdvdcss2, libdvdnav4, libdvdread4, cabextract, gecko-mediaplayer,
+  totem-xine, unrar, unshield, mint-flashplugin, w32codecs
+Description: Linux Deepin Meta Package
+ This packages is a meta one which depends on all Deepin related packages.
