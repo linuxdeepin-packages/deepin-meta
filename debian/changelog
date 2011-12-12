@@ -1,3 +1,25 @@
+deepin-meta (11.12-14) oneiric; urgency=low
+
+  * As previous deepin-meta-desktop is 11.12-13, reprepro refuses 
+    to accept new deepin-meta-desktop as 11.12-5
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sat, 10 Dec 2011 22:09:25 +0800
+
+deepin-meta (11.12-5) oneiric; urgency=low
+
+  * Make deepin-desktop don't conflict with deepin-meta-desktop,
+    so that user can upgrade from deepin-meta-desktop to deepin-desktop.
+  * The same thing is done with deepin-gnome-core.
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sat, 10 Dec 2011 20:51:50 +0800
+
+deepin-meta (11.12-4) oneiric; urgency=low
+
+  * Add a bunch of language packages
+  * python-gobject-cairo (ubiquity needs it)
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 09 Dec 2011 15:52:17 +0800
+
 deepin-meta (11.12-2) oneiric; urgency=low
 
   * Add missing packages

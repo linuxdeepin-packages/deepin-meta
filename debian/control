@@ -3,62 +3,69 @@ Section: metapackages
 Priority: optional
 Maintainer: Zhang Cheng <zhangcheng@linuxdeepin.com>
 Standards-Version: 3.9.2
-Build-Depends: cdbs (>= 0.4.90),
-               debhelper (>= 8),
-               gnome-pkg-tools (>= 0.10)
+Build-Depends: debhelper (>= 8),
 
 Package: deepin-gnome-core
 Architecture: any
-Depends: brasero,
-         dconf-gsettings-backend,
-         eog,
-         evince,
-         evolution-data-server,
+Depends: ${misc:Depends},
+	 brasero (>= 3.0),
+         dconf-gsettings-backend (>= 0.7.5),
+         eog (>= 3.0),
+         evince (>= 3.0),
+         evolution-data-server (>= 3.0),
          sound-theme-freedesktop,
-         gcalctool,
+         gcalctool (>= 6.0),
+	 gconf2 (>= 2.32),
          gconf-editor,
-         glib-networking,
-         gnome-bluetooth,
-         gnome-control-center,
-         gnome-disk-utility,
-         gnome-icon-theme,
-         gnome-icon-theme-symbolic,
-         gnome-keyring,
-         libpam-gnome-keyring,
-         gnome-menus,
-         gnome-power-manager,
-         gnome-screensaver,
-         gnome-session,
-         gnome-session-fallback,
+         glib-networking (>= 2.28.7),
+         gnome-bluetooth (>= 3.0),
+         gnome-control-center (>= 1:3.0),
+         gnome-disk-utility (>= 3.0),
+         gnome-icon-theme (>= 3.0),
+         gnome-icon-theme-symbolic (>=3.0),
+         gnome-keyring (>= 3.0),
+         libpam-gnome-keyring (>= 3.0),
+         gnome-menus (>= 3.0),
+	 gnome-panel (>= 3.0),
+         gnome-power-manager (>= 3.0),
+         gnome-screensaver (>= 3.0),
+         gnome-session (>= 3.0),
+         gnome-session-fallback (>= 3.0),
 	 gnome-session-canberra,
-         gnome-settings-daemon,
-         gnome-shell,
-         gnome-system-monitor,
-         gnome-terminal,
-         gnome-themes-standard,
-         gnome-user-share,
-         baobab,
-         gnome-screenshot,
+         gnome-settings-daemon (>= 3.0),
+         gnome-shell (>= 3.0),
+         gnome-system-monitor (>= 3.0),
+         gnome-terminal (>= 3.0),
+         gnome-themes-standard (>= 3.0),
+         gnome-user-share (>= 3.0),
+         baobab (>= 3.0),
+         gnome-screenshot (>= 3.0),
          gnome-search-tool | tracker-gui,
-         gsettings-desktop-schemas,
+	 gnome-font-viewer (>= 3.0),
+         gsettings-desktop-schemas (>= 3.0),
 	 gnome-media,
-         gstreamer0.10-pulseaudio,
-         libgail-3-common,
-         gvfs-backends,
+         gstreamer0.10-pulseaudio (>= 0.10.29),
+         libgail-3-common (>= 3.0),
+         gvfs-backends (>= 1.8),
          gvfs-bin,
          libcanberra-pulse,
-         metacity,
-         nautilus,
-         network-manager-gnome,
+         metacity (>= 1:2.34),
+         nautilus (>= 3.0),
+         network-manager-gnome (>= 0.9),
          network-manager-pptp-gnome,
          notification-daemon,
          policykit-1-gnome,
          pulseaudio,
-         yelp,
-         zenity,
-         ${misc:Depends}
-Replaces: deepin-meta-gnome
-Conflicts: deepin-meta-gnome
+         yelp (>= 3.0),
+         zenity (>= 3.0),
+	 language-selector-gnome,
+# fix
+# many programs relies on gtk2-engines-clearlooks
+	 gtk2-engines,
+	 gtk2-engines-aurora,
+	 gtk2-engines-equinox,
+	 gtk2-engines-murrine,
+	 gtk2-engines-pixbuf
 Suggests: deepin-desktop
 Description: The GNOME Desktop Environment -- essential components
  These are the core components of the GNOME Desktop environment, an
@@ -72,12 +79,17 @@ Description: The GNOME Desktop Environment -- essential components
 Package: deepin-desktop
 Architecture: any
 Depends: deepin-gnome-core,
+    ${misc:Depends},
 # codecs
     libavcodec-extra-53,
     libdvdcss2,
     libdvdnav4,
     libdvdread4,
     w32codecs [i386] | w64codecs [amd64],
+    libimlib2,
+    libcddb,
+    libmado,
+    libzip1,
 # desktop applications
     alacarte,
     brasero,
@@ -100,6 +112,7 @@ Depends: deepin-gnome-core,
     fcitx-ui-classic,
     im-config,
     file-roller,
+    gedit,
     gnome-media,
     gnome-mplayer,
     gnome-online-accounts,
@@ -121,6 +134,8 @@ Depends: deepin-gnome-core,
     remmina-plugin-vnc,
     shotwell,
     shutter,
+    thunderbird,
+    thunderbird-gnome-support,
     uget,
     usb-creator-gtk,
 # deepin specific
@@ -141,9 +156,13 @@ Depends: deepin-gnome-core,
     grub2-theme-deepin,
     ttf-liberation,
     ttf-wqy-microhei,
+    ttf-wqy-zenhei,
+    ttf-arphic-ukai,
+    ttf-arphic-uming,
     x-ttcidfont-conf,
     zukitwo-gtk-theme,
 # utils
+    gnome-alsamixer,
     appmenu-gtk,
     appmenu-gtk3,
     arj,
@@ -226,6 +245,31 @@ Depends: deepin-gnome-core,
     ntfs-config,
     toshset,
     usb-modeswitch,
+    nvidia-common,
+    radeontool,
+# language pack
+    language-pack-en,
+    language-pack-zh-hans,
+    language-pack-zh-hant,
+    language-pack-gnome-en,
+    language-pack-gnome-zh-hans,
+    language-pack-gnome-zh-hant,
+    thunderbird-locale-zh-cn,
+    wamerican,
+    dictionaries-common,
+    firefox-locale-en,
+    firefox-locale-zh-hans,
+    firefox-locale-zh-hant,
+    hunspell-en-us,
+    hyphen-en-us,
+    libreoffice-l10n-en-gb,
+    libreoffice-l10n-zh-cn,
+    libreoffice-l10n-zh-tw,
+    libreoffice-help-en-us,
+    libreoffice-help-zh-cn,
+    libreoffice-help-zh-tw,
+    mythes-en-us,
+    openoffice.org-hyphenation-en-us,
 # other 
     dmz-cursor-theme,
     lightdm,
@@ -236,11 +280,39 @@ Depends: deepin-gnome-core,
     plymouth-theme-ubuntu-text,
     ubuntu-system-adjustments,
     unity-greeter,
-    xorg
-Replaces: deepin-meta-desktop
-Conflicts: deepin-meta-desktop
+    xorg,
+# --- fix ---
+# ubiquity needs this
+    python-gobject-cairo
 Description: The Deepin desktop system
  This package depends on all of the packages in the Deepin desktop system
  .
  It is also used to help ensure proper upgrades, so it is recommended that
  it not be removed.
+
+Package: deepin-meta-desktop
+Architecture: all
+Depends: deepin-desktop (>= ${source:Version}),
+         ${misc:Depends}
+Description: The Deepin desktop system
+ This package depends on all of the packages in the Deepin desktop system
+ .
+ It is also used to help ensure proper upgrades, so it is recommended that
+ it not be removed.
+ .
+ This meta-package is obsolete and has been replaced by 
+ "deepin-desktop".
+
+Package: deepin-meta-gnome
+Architecture: all
+Depends: deepin-gnome-core (>= ${source:Version}),
+         ${misc:Depends}
+Description: The GNOME Desktop Environment -- essential components
+ These are the core components of the GNOME Desktop environment, an
+ intuitive and attractive desktop.
+ .
+ This meta-package depends on a basic set of programs, including a file
+ manager, an image viewer and other tools.
+ .
+ It contains the official “core” modules of the GNOME desktop.
+
