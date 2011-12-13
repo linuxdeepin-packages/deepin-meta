@@ -1,3 +1,50 @@
+deepin-meta (11.12-19) oneiric; urgency=low
+
+  * Remove depends to ubuntu-system-adjustments
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 13 Dec 2011 21:10:43 +0800
+
+deepin-meta (11.12-18) oneiric; urgency=low
+
+  * Remove depends to
+    - deepin-themes
+    - deepin-icons
+    - deepin-artwork-gnome
+    - deepin-cursor-theme
+  * Add depends:
+    + deepin-artwork
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 13 Dec 2011 21:03:01 +0800
+
+deepin-meta (11.12-17) oneiric; urgency=low
+
+  * Remove deepinsystem
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 13 Dec 2011 16:47:33 +0800
+
+deepin-meta (11.12-16) oneiric; urgency=low
+
+  * Remove gnome-shell-extensions
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Mon, 12 Dec 2011 17:21:26 +0800
+
+deepin-meta (11.12-15) oneiric; urgency=low
+
+  * Add a lot of things
+    + libimlib2
+    + libcddb
+    + libmado
+    + libzip1
+    ## the above 4 libs is required by deadbeef 
+    + gedit
+    + thunderbird
+    + thunderbird-gnome-support
+    + thunderbird-locale-zh-cn
+    + nvidia-common
+    + radeontools
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Mon, 12 Dec 2011 17:02:07 +0800
+
 deepin-meta (11.12-14) oneiric; urgency=low
 
   * As previous deepin-meta-desktop is 11.12-13, reprepro refuses 
