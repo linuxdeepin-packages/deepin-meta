@@ -86,10 +86,6 @@ Depends: deepin-gnome-core,
     libdvdnav4,
     libdvdread4,
     w32codecs [i386] | w64codecs [amd64],
-    libimlib2,
-    libcddb2,
-    libmad0,
-    libzip1,
 # desktop applications
     alacarte,
     brasero,
@@ -104,13 +100,13 @@ Depends: deepin-gnome-core,
     fcitx-config-gtk,
     fcitx-frontend-gtk2,
     fcitx-frontend-gtk3,
-    fcitx-googlepinyin,
+    fcitx-sunpinyin,
     fcitx-module-dbus,
     fcitx-module-x11,
     fcitx-table,
     fcitx-table-wubi,
     fcitx-ui-classic,
-    im-config,
+    im-config | im-switch,
     file-roller,
     gedit,
     gnome-media,
@@ -142,22 +138,11 @@ Depends: deepin-gnome-core,
     deepin-artwork,
     deepin-default-settings,
     deepin-firefox-addons,
-    deepin-fontselector,
     deepin-games,
-    deepin-gse-all,
-    deepin-sample-music,
     deepin-software-center,
     deepin-tools,
     deepin-info-gnome, 
     deepin-common, 
-    grub2-theme-deepin,
-    ttf-liberation,
-    ttf-wqy-microhei,
-    ttf-wqy-zenhei,
-    ttf-arphic-ukai,
-    ttf-arphic-uming,
-    x-ttcidfont-conf,
-    zukitwo-gtk-theme,
 # utils
     aptitude,
     gnome-alsamixer,
@@ -225,6 +210,7 @@ Depends: deepin-gnome-core,
     xul-ext-ubufox,
     zip,
     zoo,
+    zsync,
     xfsprogs,
 # hardware and driver and such
     alsa-base, 
@@ -269,20 +255,21 @@ Depends: deepin-gnome-core,
     mythes-en-us,
     openoffice.org-hyphenation-en-us,
 # other 
-    dmz-cursor-theme,
     lightdm,
     grub-pc,
-    linux-headers-generic,
-    linux-image-generic,
-    plymouth-theme-ubuntu-logo,
-    plymouth-theme-ubuntu-text,
-    unity-greeter,
+    linux-headers-generic-pae [i386] | linux-headers-generic [amd64],
+    linux-image-generic-pae [i386] | linux-image-generic [amd64],
     python-configobj,
     xorg,
+# package version control
+    base-files (= 6.5~deepin1),
 # --- fix ---
 # ubiquity needs this
     python-gobject-cairo
-Conflicts: deepinsystem
+Conflicts: deepinsystem,
+    fvwm1,
+    unity,
+    compiz
 Replaces: deepinsystem
 Description: The Deepin desktop system
  This package depends on all of the packages in the Deepin desktop system
@@ -315,4 +302,6 @@ Description: The GNOME Desktop Environment -- essential components
  manager, an image viewer and other tools.
  .
  It contains the official “core” modules of the GNOME desktop.
-
+ .
+ This meta-package is obsolete and has been replaced by 
+ "deepin-gnome-core".

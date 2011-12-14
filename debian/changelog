@@ -1,3 +1,36 @@
+deepin-meta (11.12-20) oneiric; urgency=low
+
+  * move artwork related depends to deepin-artwork
+    -> deepin-theme-gnome-shell
+    -> deepin-fontselector
+    -> deepin-gse-all
+    -> deepin-sample-music
+    -> grub2-theme-deepin
+    -> ttf-liberation,
+    -> ttf-wqy-microhei,
+    -> ttf-wqy-zenhei,
+    -> ttf-arphic-ukai,
+    -> ttf-arphic-uming,
+    -> x-ttcidfont-conf,
+    -> zukitwo-gtk-theme,
+    -> dmz-cursor-theme
+    -> plymouth-theme-ubuntu-logo
+    -> plymouth-theme-ubuntu-text
+    -> unity-greeter
+  * remove not necessary depends
+    - libimlib2
+    - libcddb2
+    - libmad0
+    - libzip1
+    (these 4 were previously added for deadbeef)
+  * change fcitx-googlepinyin to fcitx-sunpinyin
+  * add zsync
+  * add base-files (= 6.5~deepin1)
+  * change depends im-config to im-config | im-switch
+  * change i386 default to use pae kernel
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Wed, 14 Dec 2011 12:03:32 +0800
+
 deepin-meta (11.12-19) oneiric; urgency=low
 
   * Remove depends to ubuntu-system-adjustments
@@ -11,6 +44,7 @@ deepin-meta (11.12-18) oneiric; urgency=low
     - deepin-icons
     - deepin-artwork-gnome
     - deepin-cursor-theme
+    - deepin-theme-gnome-shell
   * Add depends:
     + deepin-artwork
 
