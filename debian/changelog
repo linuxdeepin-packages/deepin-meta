@@ -1,3 +1,9 @@
+deepin-meta (11.12-21) oneiric; urgency=low
+
+  * remove depend to deepin-artwork-common
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 15 Dec 2011 17:01:38 +0800
+
 deepin-meta (11.12-20) oneiric; urgency=low
 
   * move artwork related depends to deepin-artwork

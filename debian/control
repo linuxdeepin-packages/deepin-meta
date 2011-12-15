@@ -134,7 +134,6 @@ Depends: deepin-gnome-core,
     uget,
     usb-creator-gtk,
 # deepin specific
-    deepin-artwork-common,
     deepin-artwork,
     deepin-default-settings,
     deepin-firefox-addons,
