@@ -1,3 +1,9 @@
+deepin-meta (11.12-23) oneiric; urgency=low
+
+  * remove deepin-info-gnome
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 15 Dec 2011 17:45:21 +0800
+
 deepin-meta (11.12-22) oneiric; urgency=low
 
   * remove deepin-common

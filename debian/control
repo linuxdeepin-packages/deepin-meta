@@ -140,7 +140,6 @@ Depends: deepin-gnome-core,
     deepin-games,
     deepin-software-center,
     deepin-tools,
-    deepin-info-gnome, 
 # utils
     aptitude,
     gnome-alsamixer,
