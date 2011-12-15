@@ -259,7 +259,7 @@ Depends: deepin-gnome-core,
     python-configobj,
     xorg,
 # package version control
-    base-files (= 6.5~deepin1),
+    base-files (= 6.5~deepin2),
 # --- fix ---
 # ubiquity needs this
     python-gobject-cairo

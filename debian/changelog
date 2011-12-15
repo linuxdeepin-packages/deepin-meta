@@ -1,3 +1,9 @@
+deepin-meta (11.12-24) oneiric; urgency=low
+
+  * Update base-files depend version to 6.5~deepin2
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 15 Dec 2011 17:46:54 +0800
+
 deepin-meta (11.12-23) oneiric; urgency=low
 
   * remove deepin-info-gnome
