@@ -1,3 +1,11 @@
+deepin-meta (11.12-22) oneiric; urgency=low
+
+  * remove deepin-common
+  * Add packages depended by previous deepin-meta-{print,scan} as 
+    recommends.
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 15 Dec 2011 17:36:15 +0800
+
 deepin-meta (11.12-21) oneiric; urgency=low
 
   * remove depend to deepin-artwork-common

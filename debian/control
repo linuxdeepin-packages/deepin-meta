@@ -141,7 +141,6 @@ Depends: deepin-gnome-core,
     deepin-software-center,
     deepin-tools,
     deepin-info-gnome, 
-    deepin-common, 
 # utils
     aptitude,
     gnome-alsamixer,
@@ -265,6 +264,26 @@ Depends: deepin-gnome-core,
 # --- fix ---
 # ubiquity needs this
     python-gobject-cairo
+Recommends: simple-scan,
+    sane-utils,
+    libsane-hpaio,
+    cups-bsd,
+    cups-pdf,
+    foo2zjs,
+    foomatic-db-compressed-ppds,
+    foomatic-db-engine,
+    foomatic-filters,
+    hpijs,
+    hplip,
+    min12xxw,
+    openprinting-ppds,
+    pnm2ppa,
+    pxljr,
+    python-cupshelpers,
+    splix,
+    system-config-printer-common,
+    system-config-printer-gnome,
+    system-config-printer-udev
 Conflicts: deepinsystem,
     fvwm1,
     unity,
@@ -304,3 +323,10 @@ Description: The GNOME Desktop Environment -- essential components
  .
  This meta-package is obsolete and has been replaced by 
  "deepin-gnome-core".
+
+Package: deepin-common
+Architecture: all
+Depends: ${misc:Depends}, deepin-desktop
+Description: Obsolete package
+ This meta-package is obsolete and has been replaced by 
+ "deepin-desktop". You can remove it after upgrade.
