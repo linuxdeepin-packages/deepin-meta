@@ -78,7 +78,7 @@ Description: The GNOME Desktop Environment -- essential components
 
 Package: deepin-desktop
 Architecture: any
-Depends: deepin-gnome-core,
+Depends: deepin-gnome-core (= ${source:Version}),
     ${misc:Depends},
 # codecs
     libavcodec-extra-53,
@@ -94,6 +94,11 @@ Depends: deepin-gnome-core,
     chmsee,
     deadbeef,
     empathy,
+    nautilus-sendto-empathy,
+    telepathy-butterfly,
+    telepathy-gabble,
+    telepathy-haze,
+    telepathy-salut,
     eog,
     evince,
     fcitx,
@@ -137,9 +142,12 @@ Depends: deepin-gnome-core,
     deepin-artwork,
     deepin-default-settings,
     deepin-firefox-addons,
-    deepin-games,
     deepin-software-center,
     deepin-tools,
+# games
+    gnome-mahjongg,
+    gnomine,
+    quadrapassel,
 # utils
     aptitude,
     gnome-alsamixer,
@@ -283,49 +291,8 @@ Recommends: simple-scan,
     system-config-printer-common,
     system-config-printer-gnome,
     system-config-printer-udev
-Conflicts: deepinsystem,
-    fvwm1,
-    unity,
-    compiz
-Replaces: deepinsystem
 Description: The Deepin desktop system
  This package depends on all of the packages in the Deepin desktop system
  .
  It is also used to help ensure proper upgrades, so it is recommended that
  it not be removed.
-
-Package: deepin-meta-desktop
-Architecture: all
-Depends: deepin-desktop (>= ${source:Version}),
-         ${misc:Depends}
-Description: The Deepin desktop system
- This package depends on all of the packages in the Deepin desktop system
- .
- It is also used to help ensure proper upgrades, so it is recommended that
- it not be removed.
- .
- This meta-package is obsolete and has been replaced by 
- "deepin-desktop".
-
-Package: deepin-meta-gnome
-Architecture: all
-Depends: deepin-gnome-core (>= ${source:Version}),
-         ${misc:Depends}
-Description: The GNOME Desktop Environment -- essential components
- These are the core components of the GNOME Desktop environment, an
- intuitive and attractive desktop.
- .
- This meta-package depends on a basic set of programs, including a file
- manager, an image viewer and other tools.
- .
- It contains the official “core” modules of the GNOME desktop.
- .
- This meta-package is obsolete and has been replaced by 
- "deepin-gnome-core".
-
-Package: deepin-common
-Architecture: all
-Depends: ${misc:Depends}, deepin-desktop
-Description: Obsolete package
- This meta-package is obsolete and has been replaced by 
- "deepin-desktop". You can remove it after upgrade.
