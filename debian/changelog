@@ -1,3 +1,63 @@
+deepin-meta (11.12-35) oneiric; urgency=low
+
+  * Split deepin-desktop into
+    + deepin-desktop-zh-hans
+    + deepin-desktop-zh-hant
+    + deepin-desktop-en
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sun, 25 Dec 2011 15:04:54 +0800
+
+deepin-meta (11.12-34) oneiric; urgency=low
+
+  * Add indicator-session
+    -> To show shutdown menu in deepin-unity-greeter
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sat, 24 Dec 2011 16:31:25 +0800
+
+deepin-meta (11.12-33) oneiric; urgency=low
+
+  * Add fcitx-googlepinyin
+  * Add deepin-scrot
+  * Add libflashplugin
+  * Del flashplugin-downloader
+  * Del shutter
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 18:46:53 +0800
+
+deepin-meta (11.12-32) oneiric; urgency=low
+
+  * Add gstreamer0.10-plugins-bad (gnome-shell recorder need this)
+  * Add gstreamer0.10-plugins-ugly (for mp3)
+  * Add flashplugin-downloader
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 14:59:00 +0800
+
+deepin-meta (11.12-31) oneiric; urgency=low
+
+  * Add libs required by deadbeef
+    + libcddb2,
+    + libimlib2,
+    + libmad0,
+    + libzip1,
+  * Don't use PAE kernel by default
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 12:52:06 +0800
+
+deepin-meta (11.12-30) oneiric; urgency=low
+
+  * move gnome-shell to the very beginning of deepin-gnome-core
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 20 Dec 2011 17:51:27 +0800
+
+deepin-meta (11.12-29) oneiric; urgency=low
+
+  * Add computer-janitor-gtk
+  * Add acpi-support
+  * Add add-apt-key
+  * Remove libreoffice-help-*
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 20 Dec 2011 10:18:40 +0800
+
 deepin-meta (11.12-28) oneiric; urgency=low
 
   * Remove conflicts to compiz and unity

@@ -8,6 +8,8 @@ Build-Depends: debhelper (>= 8),
 Package: deepin-gnome-core
 Architecture: any
 Depends: ${misc:Depends},
+         gnome-shell (>= 3.0),
+         metacity (>= 1:2.34),
 	 brasero (>= 3.0),
          dconf-gsettings-backend (>= 0.7.5),
          eog (>= 3.0),
@@ -33,7 +35,6 @@ Depends: ${misc:Depends},
          gnome-session-fallback (>= 3.0),
 	 gnome-session-canberra,
          gnome-settings-daemon (>= 3.0),
-         gnome-shell (>= 3.0),
          gnome-system-monitor (>= 3.0),
          gnome-terminal (>= 3.0),
          gnome-themes-standard (>= 3.0),
@@ -49,7 +50,6 @@ Depends: ${misc:Depends},
          gvfs-backends (>= 1.8),
          gvfs-bin,
          libcanberra-pulse,
-         metacity (>= 1:2.34),
          nautilus (>= 3.0),
          network-manager-gnome (>= 0.9),
          network-manager-pptp-gnome,
@@ -86,12 +86,20 @@ Depends: deepin-gnome-core (= ${source:Version}),
     libdvdnav4,
     libdvdread4,
     w32codecs [i386] | w64codecs [amd64],
+    gstreamer0.10-plugins-bad,
+    gstreamer0.10-plugins-ugly,
+## deadbeef needs these
+    libcddb2,
+    libimlib2,
+    libmad0,
+    libzip1,
 # desktop applications
     alacarte,
     brasero,
     brasero-cdrkit,
     cdparanoia,
     chmsee,
+    computer-janitor-gtk,
     deadbeef,
     empathy,
     nautilus-sendto-empathy,
@@ -101,17 +109,6 @@ Depends: deepin-gnome-core (= ${source:Version}),
     telepathy-salut,
     eog,
     evince,
-    fcitx,
-    fcitx-config-gtk,
-    fcitx-frontend-gtk2,
-    fcitx-frontend-gtk3,
-    fcitx-sunpinyin,
-    fcitx-module-dbus,
-    fcitx-module-x11,
-    fcitx-table,
-    fcitx-table-wubi,
-    fcitx-ui-classic,
-    im-config | im-switch,
     file-roller,
     gedit,
     gnome-media,
@@ -133,7 +130,6 @@ Depends: deepin-gnome-core (= ${source:Version}),
     remmina-plugin-rdp,
     remmina-plugin-vnc,
     shotwell,
-    shutter,
     thunderbird,
     thunderbird-gnome-support,
     uget,
@@ -144,11 +140,13 @@ Depends: deepin-gnome-core (= ${source:Version}),
     deepin-firefox-addons,
     deepin-software-center,
     deepin-tools,
+    deepin-scrot,
 # games
     gnome-mahjongg,
     gnomine,
     quadrapassel,
 # utils
+    add-apt-key,
     aptitude,
     gnome-alsamixer,
     appmenu-gtk,
@@ -218,6 +216,7 @@ Depends: deepin-gnome-core (= ${source:Version}),
     zsync,
     xfsprogs,
 # hardware and driver and such
+    acpi-support,
     alsa-base, 
     alsa-utils,
     b43-fwcutter,
@@ -236,42 +235,23 @@ Depends: deepin-gnome-core (= ${source:Version}),
     usb-modeswitch,
     nvidia-common,
     radeontool,
-# language pack
-    language-pack-en,
-    language-pack-zh-hans,
-    language-pack-zh-hant,
-    language-pack-gnome-en,
-    language-pack-gnome-zh-hans,
-    language-pack-gnome-zh-hant,
-    thunderbird-locale-zh-cn,
-    wamerican,
-    dictionaries-common,
-    firefox-locale-en,
-    firefox-locale-zh-hans,
-    firefox-locale-zh-hant,
-    hunspell-en-us,
-    hyphen-en-us,
-    libreoffice-l10n-en-gb,
-    libreoffice-l10n-zh-cn,
-    libreoffice-l10n-zh-tw,
-    libreoffice-help-en-us,
-    libreoffice-help-zh-cn,
-    libreoffice-help-zh-tw,
-    mythes-en-us,
-    openoffice.org-hyphenation-en-us,
 # other 
     lightdm,
     grub-pc,
-    linux-headers-generic-pae [i386] | linux-headers-generic [amd64],
-    linux-image-generic-pae [i386] | linux-image-generic [amd64],
+    linux-headers-generic,
+    linux-image-generic,
     python-configobj,
     xorg,
+    libflashplugin,
+# show shutdown menu in unity-greeter needs this
+    indicator-session,
 # package version control
     base-files (= 6.5~deepin2),
 # --- fix ---
 # ubiquity needs this
     python-gobject-cairo
-Recommends: simple-scan,
+Recommends: deepin-desktop-zh-hans | deepin-desktop-zh-hant | deepin-desktop-en,
+    simple-scan,
     sane-utils,
     libsane-hpaio,
     cups-bsd,
@@ -291,7 +271,77 @@ Recommends: simple-scan,
     system-config-printer-common,
     system-config-printer-gnome,
     system-config-printer-udev
-Description: The Deepin desktop system
+Description: The Deepin desktop system common
+ This package depends on all of the packages in the Deepin desktop system
+ .
+ It is also used to help ensure proper upgrades, so it is recommended that
+ it not be removed.
+
+Package: deepin-desktop-zh-hans
+Architecture: all
+Depends: ${misc:Depends}, deepin-desktop,
+    fcitx,
+    fcitx-config-gtk,
+    fcitx-frontend-gtk2,
+    fcitx-frontend-gtk3,
+    fcitx-sunpinyin,
+    fcitx-googlepinyin,
+    fcitx-module-dbus,
+    fcitx-module-x11,
+    fcitx-table,
+    fcitx-table-wubi,
+    fcitx-ui-classic,
+    im-config | im-switch,
+# language pack
+    language-pack-zh-hans,
+    language-pack-gnome-zh-hans,
+    wamerican,
+    dictionaries-common,
+    firefox-locale-zh-hans,
+    libreoffice-l10n-zh-cn,
+Description: The Deepin desktop system -- Simplefied Chinese edition
+ This package depends on all of the packages in the Deepin desktop system
+ .
+ It is also used to help ensure proper upgrades, so it is recommended that
+ it not be removed.
+
+Package: deepin-desktop-zh-hant
+Architecture: all
+Depends: ${misc:Depends}, deepin-desktop,
+    ibus,
+    ibus-chewing,
+    ibus-table-cangjie5,
+    ibus-gtk,
+    ibus-gtk3,
+    im-config | im-switch,
+# language pack
+    language-pack-zh-hant,
+    language-pack-gnome-zh-hant,
+    thunderbird-locale-zh-hant,
+    wamerican,
+    dictionaries-common,
+    firefox-locale-zh-hant,
+    libreoffice-l10n-zh-tw,
+Description: The Deepin desktop system -- Traditional Chinese edition
+ This package depends on all of the packages in the Deepin desktop system
+ .
+ It is also used to help ensure proper upgrades, so it is recommended that
+ it not be removed.
+
+Package: deepin-desktop-en
+Architecture: all
+Depends: ${misc:Depends}, deepin-desktop,
+# language pack
+    language-pack-en,
+    language-pack-gnome-en,
+    wamerican,
+    dictionaries-common,
+    firefox-locale-en,
+    hunspell-en-us,
+    hyphen-en-us,
+    libreoffice-l10n-en-gb,
+    mythes-en-us
+Description: The Deepin desktop system -- English edition
  This package depends on all of the packages in the Deepin desktop system
  .
  It is also used to help ensure proper upgrades, so it is recommended that
