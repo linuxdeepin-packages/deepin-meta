@@ -270,7 +270,8 @@ Recommends: deepin-desktop-zh-hans | deepin-desktop-zh-hant | deepin-desktop-en,
     splix,
     system-config-printer-common,
     system-config-printer-gnome,
-    system-config-printer-udev
+    system-config-printer-udev,
+    wine (= 1.3.8-1-1deepin0)
 Description: The Deepin desktop system common
  This package depends on all of the packages in the Deepin desktop system
  .
