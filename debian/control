@@ -8,8 +8,8 @@ Build-Depends: debhelper (>= 8),
 Package: deepin-gnome-core
 Architecture: any
 Depends: ${misc:Depends},
-         gnome-shell (>= 3.0),
          metacity (>= 1:2.34),
+         gnome-shell (>= 3.0),
 	 brasero (>= 3.0),
          dconf-gsettings-backend (>= 0.7.5),
          eog (>= 3.0),
@@ -310,6 +310,7 @@ Architecture: all
 Depends: ${misc:Depends}, deepin-desktop,
     ibus,
     ibus-chewing,
+    ibus-table-cangjie3,
     ibus-table-cangjie5,
     ibus-gtk,
     ibus-gtk3,
