@@ -1,3 +1,21 @@
+deepin-meta (11.12-38) oneiric; urgency=low
+
+  * Change wine to wine1.3
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 27 Dec 2011 15:16:17 +0800
+
+deepin-meta (11.12-37) oneiric; urgency=low
+
+  * Move wine (= 1.3.8-1-1deepin0) to deepin-desktop-zh-hans Depends
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 27 Dec 2011 14:46:18 +0800
+
+deepin-meta (11.12-36) oneiric; urgency=low
+
+  * Add wine (= 1.3.8-1-1deepin0) to deepin-desktop-zh-hans Recommends
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 27 Dec 2011 14:12:56 +0800
+
 deepin-meta (11.12-35) oneiric; urgency=low
 
   * Split deepin-desktop into

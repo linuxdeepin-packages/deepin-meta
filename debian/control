@@ -247,6 +247,7 @@ Depends: deepin-gnome-core (= ${source:Version}),
     indicator-session,
 # package version control
     base-files (= 6.5~deepin2),
+    wine1.3 ,
 # --- fix ---
 # ubiquity needs this
     python-gobject-cairo
@@ -270,8 +271,7 @@ Recommends: deepin-desktop-zh-hans | deepin-desktop-zh-hant | deepin-desktop-en,
     splix,
     system-config-printer-common,
     system-config-printer-gnome,
-    system-config-printer-udev,
-    wine (= 1.3.8-1-1deepin0)
+    system-config-printer-udev
 Description: The Deepin desktop system common
  This package depends on all of the packages in the Deepin desktop system
  .
