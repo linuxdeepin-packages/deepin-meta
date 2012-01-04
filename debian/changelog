@@ -1,3 +1,21 @@
+deepin-meta (11.12-46) oneiric; urgency=low
+
+  [deepin-desktop]
+  + gstreamer0.10-ffmpeg
+  + gstreamer0.10-fluendo-mp3
+  + gstreamer0.10-gnomevfs
+  + mplayer2
+  + dpkg-dev (bcm -.-.-> build-essentials|dpkg-dev)
+  + gtkhash
+  - deepin-tools
+  + linux-image-generic | linux-image-generic-pae
+
+  [deepin-desktop-zh-hans]
+  + deepin-tools
+  + thunderbird-locale-zh-hans
+
+ -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Wed, 04 Jan 2012 15:47:34 +0800
+
 deepin-meta (11.12-45) oneiric; urgency=low
 
   [deepin-desktop-zh-hans]
