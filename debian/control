@@ -256,7 +256,7 @@ Depends: deepin-gnome-core (= ${source:Version}),
 # show shutdown menu in unity-greeter needs this
     indicator-session,
 # package version control
-    base-files (= 6.5~deepin2),
+    base-files (>= 6.5~deepin2),
     wine1.3 ,
 # --- fix ---
 # ubiquity needs this

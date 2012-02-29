@@ -1,3 +1,10 @@
+deepin-meta (11.12-47deepin) oneiric; urgency=low
+
+  [deepin-desktop]
+  base-files (>= 6.5~deepin2) instead of = .
+
+ -- 苏运强 <syq@syq-laptop>  Wed, 29 Feb 2012 11:18:57 +0800
+
 deepin-meta (11.12-46) oneiric; urgency=low
 
   [deepin-desktop]
