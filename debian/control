@@ -6,7 +6,7 @@ Standards-Version: 3.9.2
 Build-Depends: debhelper (>= 8),
 
 Package: deepin-gnome-core
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends},
          metacity (>= 1:2.34),
          gnome-shell (>= 3.0),
@@ -78,19 +78,16 @@ Description: The GNOME Desktop Environment -- essential components
  It contains the official “core” modules of the GNOME desktop.
 
 Package: deepin-desktop
-Architecture: any
+Architecture: all
 Depends: deepin-gnome-core (= ${source:Version}),
     ${misc:Depends},
 # codecs
     libavcodec-extra-53,
-    libdvdcss2,
     libdvdnav4,
     libdvdread4,
-    w32codecs [i386] | w64codecs [amd64],
     gstreamer0.10-plugins-bad,
     gstreamer0.10-plugins-ugly,
     gstreamer0.10-ffmpeg,
-    gstreamer0.10-fluendo-mp3,
     gstreamer0.10-gnomevfs,
 ## deadbeef needs these
     libcddb2,
@@ -103,7 +100,6 @@ Depends: deepin-gnome-core (= ${source:Version}),
     brasero-cdrkit,
     cdparanoia,
     chmsee,
-    computer-janitor-gtk,
     deadbeef,
     empathy,
     nautilus-sendto-empathy,
@@ -153,9 +149,6 @@ Depends: deepin-gnome-core (= ${source:Version}),
     add-apt-key,
     aptitude,
     gnome-alsamixer,
-    appmenu-gtk,
-    appmenu-gtk3,
-    arj,
     avahi-utils,
     bamfdaemon,
     bash-completion,
@@ -198,11 +191,10 @@ Depends: deepin-gnome-core (= ${source:Version}),
     rsync,
     samba,
     samba-client,
-    ssh,
+    openssh-client,
     telnet,
     tree,
     unrar,
-    unrar-free,
     unzip,
     vim-tiny,
     wget,
@@ -215,6 +207,7 @@ Depends: deepin-gnome-core (= ${source:Version}),
     xkb-data,
     xml-core,
     xul-ext-ubufox,
+    arj,
     zip,
     zoo,
     zsync,
@@ -313,7 +306,7 @@ Depends: ${misc:Depends}, deepin-desktop,
     wamerican,
     dictionaries-common,
     firefox-locale-zh-hans,
-    libreoffice-l10n-zh-hans,
+    libreoffice-l10n-zh-cn,
 Description: The Deepin desktop system -- Simplefied Chinese edition
  This package depends on all of the packages in the Deepin desktop system
  .
