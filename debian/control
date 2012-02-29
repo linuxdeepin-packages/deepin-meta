@@ -14,7 +14,6 @@ Depends: ${misc:Depends},
          dconf-gsettings-backend (>= 0.7.5),
          eog (>= 3.0),
          evince (>= 3.0),
-         evolution-data-server (>= 3.0),
          sound-theme-freedesktop,
          gcalctool (>= 6.0),
 	 gconf2 (>= 2.32),
@@ -62,11 +61,7 @@ Depends: ${misc:Depends},
 	 gnome-user-guide,
 # fix
 # many programs relies on gtk2-engines-clearlooks
-	 gtk2-engines,
-	 gtk2-engines-aurora,
-	 gtk2-engines-equinox,
-	 gtk2-engines-murrine,
-	 gtk2-engines-pixbuf
+	 gtk2-engines
 Suggests: deepin-desktop
 Description: The GNOME Desktop Environment -- essential components
  These are the core components of the GNOME Desktop environment, an
@@ -85,10 +80,20 @@ Depends: deepin-gnome-core (= ${source:Version}),
     libavcodec-extra-53,
     libdvdnav4,
     libdvdread4,
-    gstreamer0.10-plugins-bad,
     gstreamer0.10-plugins-ugly,
+    gstreamer0.10-plugins-bad,
     gstreamer0.10-ffmpeg,
     gstreamer0.10-gnomevfs,
+    gstreamer0.10-packagekit,
+# artwork
+## previous deepin-icons depends on it
+    faenza-icon-theme,
+    deepin-gse-all,
+## dmz cursor theme (consider remove this?)
+    dmz-cursor-theme,
+    grub2-theme-deepin,
+    deepin-unity-greeter,
+    deepin-sample-music,
 ## deadbeef needs these
     libcddb2,
     libimlib2,
@@ -160,6 +165,9 @@ Depends: deepin-gnome-core (= ${source:Version}),
     command-not-found,
     dialog,
     dnsmasq-base,
+    dnsutils,
+    whois,
+    traceroute,
     dosfstools,
     exiv2,
     ftp,
@@ -195,6 +203,7 @@ Depends: deepin-gnome-core (= ${source:Version}),
     telnet,
     tree,
     unrar,
+    unrar-free,
     unzip,
     vim-tiny,
     wget,
@@ -207,7 +216,6 @@ Depends: deepin-gnome-core (= ${source:Version}),
     xkb-data,
     xml-core,
     xul-ext-ubufox,
-    arj,
     zip,
     zoo,
     zsync,
@@ -238,23 +246,24 @@ Depends: deepin-gnome-core (= ${source:Version}),
     gtkhash,
     lightdm,
     grub-pc,
-    linux-headers-generic | linux-headers-generic-pae,
-    linux-image-generic | linux-image-generic-pae,
     python-configobj,
     xorg,
     libflashplugin,
+    gtk2-engines-murrine,
+    gtk2-engines-pixbuf,
+    gtk3-engines-unico,
 ## plymouth theme 
     plymouth-theme-deepin-logo,
     plymouth-theme-deepin-text,
 # show shutdown menu in unity-greeter needs this
     indicator-session,
 # package version control
-    base-files (>= 6.5~deepin2),
+    base-files (= 6.5~deepin2),
     wine1.3 ,
-# --- fix ---
-# ubiquity needs this
-    python-gobject-cairo
-Recommends: deepin-desktop-zh-hans | deepin-desktop-zh-hant | deepin-desktop-en,
+    rtkit,
+    seahorse,
+    pcmciautils,
+    pnm2ppa,
     simple-scan,
     sane-utils,
     libsane-hpaio,
@@ -268,13 +277,16 @@ Recommends: deepin-desktop-zh-hans | deepin-desktop-zh-hant | deepin-desktop-en,
     hplip,
     min12xxw,
     openprinting-ppds,
-    pnm2ppa,
     pxljr,
     python-cupshelpers,
     splix,
     system-config-printer-common,
     system-config-printer-gnome,
-    system-config-printer-udev
+    system-config-printer-udev,
+# --- fix ---
+# ubiquity needs this
+    python-gobject-cairo
+Recommends: deepin-desktop-zh-hans | deepin-desktop-zh-hant | deepin-desktop-en
 Description: The Deepin desktop system common
  This package depends on all of the packages in the Deepin desktop system
  .
@@ -307,6 +319,14 @@ Depends: ${misc:Depends}, deepin-desktop,
     dictionaries-common,
     firefox-locale-zh-hans,
     libreoffice-l10n-zh-cn,
+# font
+    ttf-arphic-uming,
+    ttf-arphic-ukai,
+    ttf-ubuntu-font-family,
+    ttf-dejavu-extra,
+    ttf-liberation,
+    ttf-wqy-microhei,
+    x-ttcidfont-conf
 Description: The Deepin desktop system -- Simplefied Chinese edition
  This package depends on all of the packages in the Deepin desktop system
  .
@@ -332,6 +352,10 @@ Depends: ${misc:Depends}, deepin-desktop,
     dictionaries-common,
     firefox-locale-zh-hant,
     libreoffice-l10n-zh-tw,
+# font
+    ttf-liberation,
+    ttf-wqy-microhei,
+    x-ttcidfont-conf
 Description: The Deepin desktop system -- Traditional Chinese edition
  This package depends on all of the packages in the Deepin desktop system
  .
@@ -351,7 +375,12 @@ Depends: ${misc:Depends}, deepin-desktop,
     hunspell-en-us,
     hyphen-en-us,
     libreoffice-l10n-en-gb,
-    mythes-en-us
+    mythes-en-us,
+# font
+    ttf-liberation,
+    ttf-ubuntu-font-family,
+    x-ttcidfont-conf,
+    ttf-wqy-microhei
 Description: The Deepin desktop system -- English edition
  This package depends on all of the packages in the Deepin desktop system
  .

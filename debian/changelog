@@ -1,4 +1,4 @@
-deepin-meta (11.12.47deepin1) oneiric; urgency=low
+deepin-meta (11.12.47deepin2) oneiric; urgency=low
 
   [deepin-desktop]
   base-files (>= 6.5~deepin2) instead of = .
