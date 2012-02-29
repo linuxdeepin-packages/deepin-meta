@@ -1,366 +1,123 @@
 Source: deepin-meta
-Section: metapackages
+Section: admin
 Priority: optional
-Maintainer: Zhang Cheng <zhangcheng@linuxdeepin.com>
-Standards-Version: 3.9.2
-Build-Depends: debhelper (>= 8),
+Maintainer: Leng Ganghua <hiweed@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
 
-Package: deepin-gnome-core
+Package: deepin-meta-desktop
+Architecture: all
+Depends: deepin-meta-gnome, deepin-info-main | deepin-info, 
+  deepin-meta-codecs, ubuntu-system-adjustments
+Description: All the packages installed by default in the Main Edition of Linux Deepin
+ All the packages installed by default in the Main Edition of Linux Deepin.
+
+Package: deepin-meta-gnome
+Architecture: all
+Depends: deepin-common, deepin-artwork-common, deepin-artwork-gnome, deepinsystem, 
+  deepin-cursor-theme, deepin-default-settings, deepin-icons, deepin-themes, 
+  deepin-tools, ibus, yong, yong-skins, arista, 
+  gnome-globalmenu, gnome-window-applets, grub2-theme-deepin, aliedit,
+  ttf-wqy-microhei, leafpad, expect, ntfs-config, chmsee, nautilus-share,
+  tree, shutter, claws-mail, claws-mail-i18n, xscreensaver,  
+  deepin-games, preload, dia, emesene,
+  language-pack-zh-hans, language-pack-gnome-zh-hans, localepurge,
+  wine, winetricks, deadbeef, remmina, shotwell, deepin-sample-music,
+  cairo-dock-core, cairo-dock-plug-ins, openfetion, gwrite, 
+  ndisgtk, ndiswrapper-common, ndiswrapper-utils-1.9, p7zip, gdebi, 
+  nautilus-wallpaper, gtk-recordmydesktop, gnome-session-canberra,
+  add-apt-key, compiz-check, compizconfig-settings-manager, 
+  mintbackup, mintdesktop, mintmenu, mintupdate, mintupload, mintwifi, 
+  nautilus-actions, nautilus-gksu, nautilus-open-terminal, 
+  pppoe, pulseaudio-module-zeroconf, python-compizconfig, python-mutagen,
+  software-properties-gtk, startupmanager, unrar, unshield,
+  usb-creator-gtk, xdg-user-dirs, xdg-user-dirs-gtk
+Description: Set of packages common to all Gnome-based editions of Linux Deepin
+ Set of packages common to all Gnome-based editions of Linux Deepin.
+
+Package: deepin-meta-print
+Architecture: all
+Depends: cups, cups-bsd, cups-driver-gutenprint, cups-pdf, foo2zjs, splix,
+  foomatic-db-compressed-ppds, ghostscript-cups, hplip, hplip-cups, hplip-data,
+  hpijs, min12xxw, libgutenprint2, foomatic-db-engine,
+  foomatic-filters, libgutenprint2, openprinting-ppds, python-cupshelpers,
+  pnm2ppa, system-config-printer-common, system-config-printer-gnome,
+  system-config-printer-udev, pxljr
+Description: Printing support for Linux Deepin
+ cups, hplip, foomatic, etc.
+
+Package: deepin-meta-bluetooth
+Architecture: all
+Depends: bluez-cups, bluez, gnome-bluetooth, bluez-alsa, bluez-gstreamer
+Description: Bluetooth support for Linux Deepin
+ bluez, gnome-bluetooth, etc.
+
+Package: deepin-meta-scan
+Architecture: all
+Depends: libsane-hpaio, sane-utils, simple-scan, simple-ccsm
+Description: Scanning support for Linux Deepin
+ sane-utils, simple-scan, etc.
+
+Package: deepin-meta-codecs
 Architecture: any
-Depends: ${misc:Depends},
-         metacity (>= 1:2.34),
-         gnome-shell (>= 3.0),
-	 brasero (>= 3.0),
-         dconf-gsettings-backend (>= 0.7.5),
-         eog (>= 3.0),
-         evince (>= 3.0),
-         evolution-data-server (>= 3.0),
-         sound-theme-freedesktop,
-         gcalctool (>= 6.0),
-	 gconf2 (>= 2.32),
-         gconf-editor,
-         glib-networking (>= 2.28.7),
-         gnome-bluetooth (>= 3.0),
-         gnome-control-center (>= 1:3.0),
-         gnome-disk-utility (>= 3.0),
-         gnome-icon-theme (>= 3.0),
-         gnome-icon-theme-symbolic (>=3.0),
-         gnome-keyring (>= 3.0),
-         libpam-gnome-keyring (>= 3.0),
-         gnome-menus (>= 3.0),
-	 gnome-panel (>= 3.0),
-         gnome-power-manager (>= 3.0),
-         gnome-screensaver (>= 3.0),
-         gnome-session (>= 3.0),
-         gnome-session-fallback (>= 3.0),
-	 gnome-session-canberra,
-         gnome-settings-daemon (>= 3.0),
-         gnome-system-monitor (>= 3.0),
-         gnome-terminal (>= 3.0),
-         gnome-themes-standard (>= 3.0),
-         gnome-user-share (>= 3.0),
-         baobab (>= 3.0),
-         gnome-screenshot (>= 3.0),
-         gnome-search-tool | tracker-gui,
-	 gnome-font-viewer (>= 3.0),
-         gsettings-desktop-schemas (>= 3.0),
-	 gnome-media,
-         gstreamer0.10-pulseaudio (>= 0.10.29),
-         libgail-3-common (>= 3.0),
-         gvfs-backends (>= 1.8),
-         gvfs-bin,
-         libcanberra-pulse,
-         nautilus (>= 3.0),
-         network-manager-gnome (>= 0.9),
-         network-manager-pptp-gnome,
-         notification-daemon,
-         policykit-1-gnome,
-         pulseaudio,
-	 yelp (>= 3.0),
-         zenity (>= 3.0),
-	 language-selector-gnome,
-	 gnome-user-guide,
-# fix
-# many programs relies on gtk2-engines-clearlooks
-	 gtk2-engines,
-	 gtk2-engines-aurora,
-	 gtk2-engines-equinox,
-	 gtk2-engines-murrine,
-	 gtk2-engines-pixbuf
-Suggests: deepin-desktop
-Description: The GNOME Desktop Environment -- essential components
- These are the core components of the GNOME Desktop environment, an
- intuitive and attractive desktop.
- .
- This meta-package depends on a basic set of programs, including a file
- manager, an image viewer and other tools.
- .
- It contains the official “core” modules of the GNOME desktop.
+Depends: gstreamer0.10-esd, gstreamer0.10-ffmpeg, gstreamer0.10-pitfdll [i386], 
+  gstreamer0.10-plugins-bad, gstreamer0.10-plugins-bad-multiverse, 
+  gstreamer0.10-plugins-ugly, gstreamer0.10-plugins-ugly-multiverse, 
+  gstreamer0.10-fluendo-mp3, gstreamer0.10-packagekit, gstreamer0.10-gnomevfs,
+  libdvdcss2, libdvdnav4, libdvdread4, cabextract, totem-xine,
+  mint-flashplugin [i386], mint-flashplugin-x64 [amd64], 
+  w32codecs [i386], w64codecs [amd64]
+Description: All the packages required for multimedia support in Linux Deepin.
+ All the packages required for multimedia support in Linux Deepin.
 
-Package: deepin-desktop
+Package: deepin-meta-conflicts
+Architecture: all
+Conflicts: grub2-theme-mint, mint-artwork-gnome, mint-search-addon, mint-stylish-addon,
+  mintwelcome, ttf-droid, mint-meta-gnome, mint-meta-codecs, giver, cowsay, freepats,
+  xchat-common, thunderbird, ghostscript, libsane, libopencc1, gsfonts, gdb,
+  fortune-mod, fortunes-min, fortunes-husse, mint-x-icons, mint-x-theme, f-spot,
+  mint-elementary-icons, mint-backgrounds-helena, mint-backgrounds-isadora,
+  mint-backgrounds-julia, mint-local-repository, ubiquity-slideshow-mint,
+  libc6-dev, language-pack-gnome-en-base, language-pack-en-base, cups-common,
+  erlang-syntax-tools, erlang-crypto, erlang-xmerl, erlang-inets, erlang-ssl,
+  erlang-mnesia, erlang-runtime-tools, erlang-public-key, erlang-base,
+  linux-libc-dev, manpages-dev, rhythmbox, rhythmbox-plugins, rhythmbox-plugin-cdrecorder,
+  aspell, aspell-en, dictionaries-common, hunspell-en-ca, hunspell-en-us, myspell-en-au,
+  myspell-en-gb, myspell-en-za, openoffice.org-base-core, openoffice.org-calc,
+  openoffice.org-common, openoffice.org-core, openoffice.org-draw,
+  openoffice.org-emailmerge, openoffice.org-gnome, openoffice.org-gtk,
+  openoffice.org-impress, openoffice.org-l10n-common, ure, uno-libs3, netpbm,
+  openoffice.org-l10n-zh-cn, openoffice.org-math, openoffice.org-style-tango,
+  openoffice.org-writer, python-uno, wbritish, mono-runtime, geoip-database,
+  min12xxw, libgutenprint2, foomatic-db-engine, foomatic-filters,
+  libgutenprint2, openprinting-ppds, python-cupshelpers, liblouis-data,
+  ttf-dejavu, ttf-dejavu-extra, ttf-liberation, ttf-ubuntu-title,
+  tcl8.4, libsnmp15, guile-1.8-libs, libvala-0.10-0, libgsl0ldbl, 
+  bogofilter-common, gwibber, aptoncd, espeak-data, w3m, libcryptui0,
+  lftp, telepathy-gabble,libgegl-0.0-0, bluez, branding-ubuntu,
+  xscreensaver-gl, wamerican, vim-common, dnsmasq-base, telepathy-salut,
+  libgoo-canvas-perl, cli-common, gedit, gnome-screenshot, gnome-dictionary,
+  padevchooser, paman, paprefs, pavucontrol, pavumeter, pidgin-data,
+  pidgin-libnotify, pidgin-facebookchat, skype, mintnanny, ttf-dejavu-core,
+  mousetweaks, ttf-dejavu-core, libevolution, mintinstall, mintinstall-icons,
+  gimp, ttf-liberation, gthumb-data, libcrypto++8, gnome-screensaver,
+  libwxgtk2.8-0, ubuntu-sso-client, python-twisted-core,
+  libpurple0, gnome-colors-common, shiki-colors-metacity-theme, 
+  libwxbase2.8-0, rdesktop, libtelepathy-glib0, librecode0, libgvc5,
+  libgtksourceview2.0-common, libsilc-1.1-2, libnet-ssleay-perl,
+  libmtp8, libsnmp-base, libstlport4.6ldbl, libopenexr6, protobuf-compiler,
+  libgd2-xpm, libwpd8c2a, libvisual-0.4-plugins, libgstfarsight0.10-0,
+  libilmbase6, libatspi1.0-0, python-wadllib, libgraphite3, libsasl2-modules,
+  libraptor1, libsqlite0, libgdiplus, libgtkhtml-editor-common, libgail-common,
+  libupnp3, libc-dev-bin, libglew1.5, samba, cmbclient, winbind
+Description: Linux Deepin Meta Package to Remove Packages from CD
+ This packages is a meta one which is used to remove some packages.
+
+Package: deepin-games
 Architecture: any
-Depends: deepin-gnome-core (= ${source:Version}),
-    ${misc:Depends},
-# codecs
-    libavcodec-extra-53,
-    libdvdcss2,
-    libdvdnav4,
-    libdvdread4,
-    w32codecs [i386] | w64codecs [amd64],
-    gstreamer0.10-plugins-bad,
-    gstreamer0.10-plugins-ugly,
-    gstreamer0.10-ffmpeg,
-    gstreamer0.10-fluendo-mp3,
-    gstreamer0.10-gnomevfs,
-## deadbeef needs these
-    libcddb2,
-    libimlib2,
-    libmad0,
-    libzip1,
-# desktop applications
-    alacarte,
-    brasero,
-    brasero-cdrkit,
-    cdparanoia,
-    chmsee,
-    computer-janitor-gtk,
-    deadbeef,
-    empathy,
-    nautilus-sendto-empathy,
-    telepathy-butterfly,
-    telepathy-gabble,
-    telepathy-haze,
-    telepathy-salut,
-    eog,
-    evince,
-    file-roller,
-    gedit,
-    gnome-media,
-    mplayer2,
-    gnome-mplayer,
-    gnome-online-accounts,
-    gnome-power-manager,
-    gnome-tweak-tool,
-    iptux,
-    libreoffice-calc,
-    libreoffice-impress,
-    libreoffice-writer,
-    nautilus-gksu,
-    nautilus-open-terminal,
-    nautilus-share,
-    nautilus-wallpaper,
-    notify-osd,
-    notify-osd-icons,
-    remmina,
-    remmina-plugin-rdp,
-    remmina-plugin-vnc,
-    shotwell,
-    thunderbird,
-    thunderbird-gnome-support,
-    uget,
-    usb-creator-gtk,
-# deepin specific
-    deepin-artwork,
-    deepin-default-settings,
-    deepin-firefox-addons,
-    deepin-software-center,
-    deepin-scrot,
-# games
-    gnome-mahjongg,
-    gnomine,
-    quadrapassel,
-# utils
-    add-apt-key,
-    aptitude,
-    gnome-alsamixer,
-    appmenu-gtk,
-    appmenu-gtk3,
-    arj,
-    avahi-utils,
-    bamfdaemon,
-    bash-completion,
-    bc,
-    binfmt-support,
-    bsdmainutils,
-    cli-common,
-    colord,
-    command-not-found,
-    dialog,
-    dnsmasq-base,
-    dosfstools,
-    exiv2,
-    ftp,
-    lftp,
-    gdebi,
-    groff-base,
-    icc-profiles-free,
-    localepurge,
-    lsof,
-    manpages,
-    media-player-info,
-    mlocate,
-    nano,
-    netpbm,
-    p7zip,
-    p7zip-full,
-    p7zip-rar,
-    policykit-desktop-privileges,
-    poppler-data,
-    poppler-utils,
-    pppoe,
-    preload,
-    pulseaudio,
-    pulseaudio-esound-compat,
-    pulseaudio-module-bluetooth,
-    pulseaudio-module-gconf,
-    pulseaudio-module-x11,
-    pulseaudio-module-zeroconf,
-    rsync,
-    samba,
-    samba-client,
-    ssh,
-    telnet,
-    tree,
-    unrar,
-    unrar-free,
-    unzip,
-    vim-tiny,
-    wget,
-    wireless-tools,
-    wodim,
-    wpasupplicant,
-    xdg-user-dirs,
-    xdg-user-dirs-gtk,
-    xdg-utils,
-    xkb-data,
-    xml-core,
-    xul-ext-ubufox,
-    zip,
-    zoo,
-    zsync,
-    xfsprogs,
-# hardware and driver and such
-    acpi-support,
-    alsa-base, 
-    alsa-utils,
-    b43-fwcutter,
-## depend dpkg-dev first so it will not depend on build-essentials
-    dpkg-dev,
-    bcmwl-kernel-source,
-    blueman,
-    cups-driver-gutenprint,
-    firmware-b43-installer,
-    hwdata,
-    jockey-gtk,
-    mobile-broadband-provider-info,
-    modemmanager,
-    mousetweaks,
-    ndisgtk,
-    ntfs-config,
-    toshset,
-    usb-modeswitch,
-    nvidia-common,
-    radeontool,
-# other 
-    gtkhash,
-    lightdm,
-    grub-pc,
-    linux-headers-generic | linux-headers-generic-pae,
-    linux-image-generic | linux-image-generic-pae,
-    python-configobj,
-    xorg,
-    libflashplugin,
-## plymouth theme 
-    plymouth-theme-deepin-logo,
-    plymouth-theme-deepin-text,
-# show shutdown menu in unity-greeter needs this
-    indicator-session,
-# package version control
-    base-files (>= 6.5~deepin2),
-    wine1.3 ,
-# --- fix ---
-# ubiquity needs this
-    python-gobject-cairo
-Recommends: deepin-desktop-zh-hans | deepin-desktop-zh-hant | deepin-desktop-en,
-    simple-scan,
-    sane-utils,
-    libsane-hpaio,
-    cups-bsd,
-    cups-pdf,
-    foo2zjs,
-    foomatic-db-compressed-ppds,
-    foomatic-db-engine,
-    foomatic-filters,
-    hpijs,
-    hplip,
-    min12xxw,
-    openprinting-ppds,
-    pnm2ppa,
-    pxljr,
-    python-cupshelpers,
-    splix,
-    system-config-printer-common,
-    system-config-printer-gnome,
-    system-config-printer-udev
-Description: The Deepin desktop system common
- This package depends on all of the packages in the Deepin desktop system
- .
- It is also used to help ensure proper upgrades, so it is recommended that
- it not be removed.
-
-Package: deepin-desktop-zh-hans
-Architecture: all
-Depends: ${misc:Depends}, deepin-desktop,
-    fcitx,
-    fcitx-config-gtk,
-    fcitx-frontend-gtk2,
-    fcitx-frontend-gtk3,
-    fcitx-sunpinyin,
-    fcitx-module-dbus,
-    fcitx-module-x11,
-    fcitx-table,
-    fcitx-table-wubi,
-    fcitx-table-wbpy,
-    fcitx-ui-classic,
-    im-config | im-switch,
-    deepin-default-settings-zh-hans,
-    deepin-user-guide,
-    deepin-tools,
-# language pack
-    language-pack-zh-hans,
-    language-pack-gnome-zh-hans,
-    thunderbird-locale-zh-cn,
-    wamerican,
-    dictionaries-common,
-    firefox-locale-zh-hans,
-    libreoffice-l10n-zh-hans,
-Description: The Deepin desktop system -- Simplefied Chinese edition
- This package depends on all of the packages in the Deepin desktop system
- .
- It is also used to help ensure proper upgrades, so it is recommended that
- it not be removed.
-
-Package: deepin-desktop-zh-hant
-Architecture: all
-Depends: ${misc:Depends}, deepin-desktop,
-    ibus,
-    ibus-chewing,
-    ibus-table-cangjie3,
-    ibus-table-cangjie5,
-    ibus-gtk,
-    ibus-gtk3,
-    im-config | im-switch,
-    deepin-default-settings-zh-hant,
-# language pack
-    language-pack-zh-hant,
-    language-pack-gnome-zh-hant,
-    thunderbird-locale-zh-hant,
-    wamerican,
-    dictionaries-common,
-    firefox-locale-zh-hant,
-    libreoffice-l10n-zh-tw,
-Description: The Deepin desktop system -- Traditional Chinese edition
- This package depends on all of the packages in the Deepin desktop system
- .
- It is also used to help ensure proper upgrades, so it is recommended that
- it not be removed.
-
-Package: deepin-desktop-en
-Architecture: all
-Depends: ${misc:Depends}, deepin-desktop,
-# language pack
-    deepin-default-settings-en,
-    language-pack-en,
-    language-pack-gnome-en,
-    wamerican,
-    dictionaries-common,
-    firefox-locale-en,
-    hunspell-en-us,
-    hyphen-en-us,
-    libreoffice-l10n-en-gb,
-    mythes-en-us
-Description: The Deepin desktop system -- English edition
- This package depends on all of the packages in the Deepin desktop system
- .
- It is also used to help ensure proper upgrades, so it is recommended that
- it not be removed.
+Depends: quadrapassel, gnomine, gnome-mahjongg
+Description: Game-collection for Linux Deepin.
+ This meta packages will install several choosed Gnome games.
+ * quadrapassel - 俄罗斯方块
+ * gnomine - 挖雷
+ * gnome-mahjongg - 对对碰（麻将）

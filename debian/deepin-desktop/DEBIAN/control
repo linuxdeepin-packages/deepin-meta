@@ -1,0 +1,11 @@
+Package: deepin-desktop
+Source: deepin-meta
+Version: 10.12-9
+Architecture: all
+Maintainer: Leng Ganghua <hiweed@gmail.com>
+Installed-Size: 32
+Depends: deepin-meta-gnome, deepin-info-main | deepin-info, deepin-meta-codecs, ubuntu-system-adjustments
+Section: admin
+Priority: optional
+Description: All the packages installed by default in the Main Edition of Linux Deepin
+ All the packages installed by default in the Main Edition of Linux Deepin.

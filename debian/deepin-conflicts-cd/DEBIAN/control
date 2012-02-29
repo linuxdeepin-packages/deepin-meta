@@ -1,0 +1,11 @@
+Package: deepin-conflicts-cd
+Source: deepin-meta
+Version: 10.12-2
+Architecture: all
+Maintainer: Leng Ganghua <hiweed@gmail.com>
+Installed-Size: 32
+Conflicts: gedit, gimp, thunderbird, thunderbird-locale-zh-cn, xchat, xchat-common
+Section: admin
+Priority: optional
+Description: Linux Deepin Meta Package to Remove Unused Packages from CD edition
+ This packages is a meta one which is used to remove some packages.

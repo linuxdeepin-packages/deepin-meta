@@ -1,0 +1,11 @@
+Package: deepin-meta-gnome-dvd
+Source: deepin-meta
+Version: 10.12-50
+Architecture: all
+Maintainer: Leng Ganghua <hiweed@gmail.com>
+Installed-Size: 32
+Depends: bluez-cups, cups, cups-bsd, cups-driver-gutenprint, cups-pdf, foo2zjs, splix, foomatic-db-compressed-ppds, ghostscript-cups, hplip, hplip-cups, hplip-data, hpijs, libsane-hpaio, bluez, gnome-bluetooth, bluez-alsa, bluez-gstreamer, min12xxw, libgutenprint2, foomatic-db-engine, foomatic-filters, openprinting-ppds, python-cupshelpers, pnm2ppa, system-config-printer-common, system-config-printer-gnome, system-config-printer-udev, pxljr, sane-utils, simple-scan, simple-ccsm
+Section: admin
+Priority: optional
+Description: Set of packages included in the DVD edition of Linux Deepin
+ Set of packages included in the DVD edition of Linux Deepin.

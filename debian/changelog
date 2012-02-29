@@ -1,334 +1,59 @@
-deepin-meta (11.12-47deepin) oneiric; urgency=low
+deepin-meta (10.12-62) maverick; urgency=low
 
-  [deepin-desktop]
-  base-files (>= 6.5~deepin2) instead of = .
+  * Removed gecko-mediaplayer (thus all mplayer stuff)
 
- -- YunQiang Su <wzssyqa@gmail.com>  Wed, 29 Feb 2012 11:18:57 +0800
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 23 Dec 2010 14:20:11 +0800
 
-deepin-meta (11.12-46) oneiric; urgency=low
+deepin-meta (10.12-61) maverick; urgency=low
 
-  [deepin-desktop]
-  + gstreamer0.10-ffmpeg
-  + gstreamer0.10-fluendo-mp3
-  + gstreamer0.10-gnomevfs
-  + mplayer2
-  + dpkg-dev (bcm -.-.-> build-essentials|dpkg-dev)
-  + gtkhash
-  - deepin-tools
-  + linux-image-generic | linux-image-generic-pae
+  * Removed txtreader, chrome, opera, totem-xine
+  * Added deepin-sample-music
+  * Removed ibus-qt4, ppstream
 
-  [deepin-desktop-zh-hans]
-  + deepin-tools
-  + thunderbird-locale-zh-hans
+ -- Leng Ganghua <hiweed@gmail.com>  Thu, 23 Dec 2010 08:22:23 +0800
 
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Wed, 04 Jan 2012 15:47:34 +0800
+deepin-meta (10.12-58) maverick; urgency=low
+ 
+  * 将原先的 dvd 软件包分为 print、bluetooth、scan
+  * 因没有明确的法律说法，去掉中文字体
+  * 用 claws-mail 换掉 sylpheed
+  * 去掉 samba（需要共享时，会提示安装） smbclient winbind
+  * 添加 chrome opera
+  * 添加 gnome-session-canberra （登录、注销声音）
+  * 去掉 flashget, 功能太单调，鸡肋
+  * 添加 MSN 客户端软件 emesene
 
-deepin-meta (11.12-45) oneiric; urgency=low
+ -- Leng Ganghua <hiweed@gmail.com>  Mon,  20 Dec 2010 18:37:00 +0800
 
-  [deepin-desktop-zh-hans]
-  * Add deepin-user-guide
+deepin-meta (10.12-50) maverick; urgency=low
 
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 30 Dec 2011 22:03:50 +0800
+  * English fonts were replaced by deepin-meta-fonts
+  * Removed zim, mintinstall
+  * Gimp replaced by pinta
+  * Moved nautilus-share, samba, smbclient to CD
+  * 去掉 pinta，因为太不稳定了
+  * 添加 aliedit，支付宝登录控件
+  * 去掉 ubuntu-tweak
+  * 去掉 iagno （黑白棋）和 gnome-colors-common, shiki-colors-metacity-theme
 
-deepin-meta (11.12-44) oneiric; urgency=low
+ -- Leng Ganghua <hiweed@gmail.com>  Tue,  14 Dec 2010 11:32:00 +0800
 
-  [deepin-desktop-zh-hans]
-  * Add fcitx-table-wbpy
+deepin-meta (10.12-36) maverick; urgency=low
 
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 30 Dec 2011 17:06:23 +0800
+  * Added yong (ime), yong-skins
+  * Added gnome-games
+  * Added python-mutagen, txtreader
+  * Removed wine-qq
+  * Added deepin-tools
+  * Added ffmpeg, transmageddon
+  * Removed f-spot, mono-runtime, geoip-database (moved to deepin-meta-conflicts)
+  * Added shotwell, gtk-recordmydesktop, zim
 
-deepin-meta (11.12-43) oneiric; urgency=low
+ -- Leng Ganghua <hiweed@gmail.com>  Sat,  4 Dec 2010 11:21:00 +0800
 
-  * Add plymouth-theme-deepin-{logo,text}
+deepin-meta (10.12-0) maverick; urgency=low
 
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 30 Dec 2011 11:54:03 +0800
+  * Initial version
 
-deepin-meta (11.12-42) oneiric; urgency=low
+ -- Leng Ganghua <hiweed@gmail.com>  Wed,  24 Nov 2010 05:55:00 +0800
 
-  * Add yelp
-  * Add gnome-user-guide
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 30 Dec 2011 09:44:08 +0800
-
-deepin-meta (11.12-41) oneiric; urgency=low
-
-  * remove yelp
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 29 Dec 2011 22:23:22 +0800
-
-deepin-meta (11.12-40) oneiric; urgency=low
-
-  * remove ibus-googlepinyin for zh-hans
-  * add deepin-default-settings-{en,zh-han{s,t}}
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 29 Dec 2011 16:28:46 +0800
-
-deepin-meta (11.12-39) oneiric; urgency=low
-
-  * Remove fcitx-googlepinyin
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 29 Dec 2011 11:37:33 +0800
-
-deepin-meta (11.12-38) oneiric; urgency=low
-
-  * Change wine to wine1.3
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 27 Dec 2011 15:16:17 +0800
-
-deepin-meta (11.12-37) oneiric; urgency=low
-
-  * Move wine (= 1.3.8-1-1deepin0) to deepin-desktop-zh-hans Depends
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 27 Dec 2011 14:46:18 +0800
-
-deepin-meta (11.12-36) oneiric; urgency=low
-
-  * Add wine (= 1.3.8-1-1deepin0) to deepin-desktop-zh-hans Recommends
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 27 Dec 2011 14:12:56 +0800
-
-deepin-meta (11.12-35) oneiric; urgency=low
-
-  * Split deepin-desktop into
-    + deepin-desktop-zh-hans
-    + deepin-desktop-zh-hant
-    + deepin-desktop-en
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sun, 25 Dec 2011 15:04:54 +0800
-
-deepin-meta (11.12-34) oneiric; urgency=low
-
-  * Add indicator-session
-    -> To show shutdown menu in deepin-unity-greeter
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sat, 24 Dec 2011 16:31:25 +0800
-
-deepin-meta (11.12-33) oneiric; urgency=low
-
-  * Add fcitx-googlepinyin
-  * Add deepin-scrot
-  * Add libflashplugin
-  * Del flashplugin-downloader
-  * Del shutter
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 18:46:53 +0800
-
-deepin-meta (11.12-32) oneiric; urgency=low
-
-  * Add gstreamer0.10-plugins-bad (gnome-shell recorder need this)
-  * Add gstreamer0.10-plugins-ugly (for mp3)
-  * Add flashplugin-downloader
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 14:59:00 +0800
-
-deepin-meta (11.12-31) oneiric; urgency=low
-
-  * Add libs required by deadbeef
-    + libcddb2,
-    + libimlib2,
-    + libmad0,
-    + libzip1,
-  * Don't use PAE kernel by default
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 23 Dec 2011 12:52:06 +0800
-
-deepin-meta (11.12-30) oneiric; urgency=low
-
-  * move gnome-shell to the very beginning of deepin-gnome-core
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 20 Dec 2011 17:51:27 +0800
-
-deepin-meta (11.12-29) oneiric; urgency=low
-
-  * Add computer-janitor-gtk
-  * Add acpi-support
-  * Add add-apt-key
-  * Remove libreoffice-help-*
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 20 Dec 2011 10:18:40 +0800
-
-deepin-meta (11.12-28) oneiric; urgency=low
-
-  * Remove conflicts to compiz and unity
-  * Add depends to 
-    + nautilus-sendto-empathy,
-    + telepathy-butterfly,
-    + telepathy-gabble,
-    + telepathy-haze,
-    + telepathy-salut,
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 16 Dec 2011 19:57:28 +0800
-
-deepin-meta (11.12-27) oneiric; urgency=low
-
-  * Roll back last modification
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 16 Dec 2011 19:43:48 +0800
-
-deepin-meta (11.12-26) oneiric; urgency=low
-
-  * Fix empathy account issue
-    + nautilus-sendto-empathy,
-    + telepathy-butterfly,
-    + telepathy-gabble,
-    + telepathy-haze,
-    + telepathy-indicator,
-    + telepathy-salut,
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 16 Dec 2011 18:50:38 +0800
-
-deepin-meta (11.12-25) oneiric; urgency=low
-
-  * Merge deepin-games
-    + gnome-mahjongg,
-    + gnomine,
-    + quadrapassel,
-  * Remove Conflicts and Replaces of obsolete packages to ease upgrade
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 16 Dec 2011 12:04:04 +0800
-
-deepin-meta (11.12-24) oneiric; urgency=low
-
-  * Update base-files depend version to 6.5~deepin2
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 15 Dec 2011 17:46:54 +0800
-
-deepin-meta (11.12-23) oneiric; urgency=low
-
-  * remove deepin-info-gnome
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 15 Dec 2011 17:45:21 +0800
-
-deepin-meta (11.12-22) oneiric; urgency=low
-
-  * remove deepin-common
-  * Add packages depended by previous deepin-meta-{print,scan} as 
-    recommends.
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 15 Dec 2011 17:36:15 +0800
-
-deepin-meta (11.12-21) oneiric; urgency=low
-
-  * remove depend to deepin-artwork-common
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 15 Dec 2011 17:01:38 +0800
-
-deepin-meta (11.12-20) oneiric; urgency=low
-
-  * move artwork related depends to deepin-artwork
-    -> deepin-theme-gnome-shell
-    -> deepin-fontselector
-    -> deepin-gse-all
-    -> deepin-sample-music
-    -> grub2-theme-deepin
-    -> ttf-liberation,
-    -> ttf-wqy-microhei,
-    -> ttf-wqy-zenhei,
-    -> ttf-arphic-ukai,
-    -> ttf-arphic-uming,
-    -> x-ttcidfont-conf,
-    -> zukitwo-gtk-theme,
-    -> dmz-cursor-theme
-    -> plymouth-theme-ubuntu-logo
-    -> plymouth-theme-ubuntu-text
-    -> unity-greeter
-  * remove not necessary depends
-    - libimlib2
-    - libcddb2
-    - libmad0
-    - libzip1
-    (these 4 were previously added for deadbeef)
-  * change fcitx-googlepinyin to fcitx-sunpinyin
-  * add zsync
-  * add base-files (= 6.5~deepin1)
-  * change depends im-config to im-config | im-switch
-  * change i386 default to use pae kernel
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Wed, 14 Dec 2011 12:03:32 +0800
-
-deepin-meta (11.12-19) oneiric; urgency=low
-
-  * Remove depends to ubuntu-system-adjustments
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 13 Dec 2011 21:10:43 +0800
-
-deepin-meta (11.12-18) oneiric; urgency=low
-
-  * Remove depends to
-    - deepin-themes
-    - deepin-icons
-    - deepin-artwork-gnome
-    - deepin-cursor-theme
-    - deepin-theme-gnome-shell
-  * Add depends:
-    + deepin-artwork
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 13 Dec 2011 21:03:01 +0800
-
-deepin-meta (11.12-17) oneiric; urgency=low
-
-  * Remove deepinsystem
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Tue, 13 Dec 2011 16:47:33 +0800
-
-deepin-meta (11.12-16) oneiric; urgency=low
-
-  * Remove gnome-shell-extensions
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Mon, 12 Dec 2011 17:21:26 +0800
-
-deepin-meta (11.12-15) oneiric; urgency=low
-
-  * Add a lot of things
-    + libimlib2
-    + libcddb
-    + libmado
-    + libzip1
-    ## the above 4 libs is required by deadbeef 
-    + gedit
-    + thunderbird
-    + thunderbird-gnome-support
-    + thunderbird-locale-zh-cn
-    + nvidia-common
-    + radeontools
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Mon, 12 Dec 2011 17:02:07 +0800
-
-deepin-meta (11.12-14) oneiric; urgency=low
-
-  * As previous deepin-meta-desktop is 11.12-13, reprepro refuses 
-    to accept new deepin-meta-desktop as 11.12-5
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sat, 10 Dec 2011 22:09:25 +0800
-
-deepin-meta (11.12-5) oneiric; urgency=low
-
-  * Make deepin-desktop don't conflict with deepin-meta-desktop,
-    so that user can upgrade from deepin-meta-desktop to deepin-desktop.
-  * The same thing is done with deepin-gnome-core.
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Sat, 10 Dec 2011 20:51:50 +0800
-
-deepin-meta (11.12-4) oneiric; urgency=low
-
-  * Add a bunch of language packages
-  * python-gobject-cairo (ubiquity needs it)
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Fri, 09 Dec 2011 15:52:17 +0800
-
-deepin-meta (11.12-2) oneiric; urgency=low
-
-  * Add missing packages
-    + linux-image-generic
-    + wget
-    + xorg
-    + plymouth
-    + ...
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 08 Dec 2011 18:49:08 +0800
-
-deepin-meta (11.12-1) oneiric; urgency=low
-
-  * Initial pack.
-
- -- Zhang Cheng <zhangcheng@linuxdeepin.com>  Thu, 08 Dec 2011 17:50:11 +0800
